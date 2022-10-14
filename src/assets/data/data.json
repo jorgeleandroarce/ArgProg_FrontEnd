@@ -1,0 +1,162 @@
+{
+                "imgportada" : "/assets/portada.png",
+                "imgfoto": "/assets/mifoto.jpg",	
+                "nombre" : "ARCE J. Leandro",
+                "profesion" : "Full Stack Developer Jr. - Abogado",
+                "descripcion" : "Recien egresado de ArgentinaPrograma como Full Stack Developer. Abogado. Dirijo mi Estudio Jurídico en la Ciudad de La Falda, Córdoba. Aficionado al trading de bolsa y cryptomonedas.",
+                "instagram": "https://www.instagram.com/ma_constanza_ghi/", 
+                "telefono" : "543548572710",
+                "e_mail" : "jorgeleandro.arce@gmail.com",
+                                   
+
+        "educacion" :   [ 
+                        {
+                "escuela" : "Argentina Programa",
+                "logotipo" : "assets/logoargprog2.png",
+                "sitioweb" : "https://www.argentina.gob.ar/produccion/transformacion-digital-y-economia-del-conocimiento/argentina-programa",  
+                "titulo" : "Programador Web Full Stack",
+                "periodo"  : "Cursado de Septiembre 2021 a agosto de 2022"
+                },
+
+                {
+                "escuela" : "Universidad Nacional de Córdoba",
+                "logotipo": "assets/unc_logo.png",
+                "sitioweb" : "https://www.unc.edu.ar/sobre-la-unc/",  
+                "titulo" : "Abogado",
+                "periodo"  : "Finalizando en 2017"
+                }
+                ],
+        
+        "experiencia" :  [	
+                        {
+                "empresa": "Estudio Jurídico Arce J. Leandro & Asoc.",
+                "logoempresa" : "/assets/logo_Arce.jpg",
+                "sitioweb" : "",
+                "telefono" : "543548572710",
+                "cargo" :  "Propietario - Director",
+                "periodo" : "Septiembre de 2018 a la actualidad",
+                "descripcion" : "Me desempeño como Abogado Patrocinante tanto de clientes particulares como de Empresas, asesorándolos y dirigiendo procesos civiles, comerciales y laborales, tanto escritos como orales, con alto grado de litigiosidad y complejidad."
+                        },
+                        
+                        {
+                "empresa": "Soluciones Jurídicas Integrales S.J.I.",
+                "logoempresa" : "/assets/logo_SJI.jpg",
+                "sitioweb" : "",
+                "telefono" : "543548567289",
+                "cargo" :  "Abogado Jr.",
+                "periodo" : "2014 a Septiembre de 2017",
+                "descripcion" : "A medida que ganaba experiencia y conocimientos, se incrementaban mis responsabilidades, brindando asesoramiento, colaborando en todas las etapas de un proceso judicial con los socios del Estudio y llevando adelante causas hasta su finalización."
+                        }, 
+
+                        {
+                "empresa": "Soluciones Jurídicas Integrales S.J.I.",
+                "logoempresa" : "/assets/logo_SJI.jpg",
+                "sitioweb" : "",
+                "telefono" : "543548567289",
+                "cargo" :  "Abogado Socio de S.J.I.",
+                "periodo" : "Septiembre de 2017 a Septiembre de 2018",
+                "descripcion" : "Con amplia experiencia en la materia, me hice cargo completamente de los procesos de causas civiles, comerciales y laborales del Estudio Jurídico, siendo el principal responsable del sector, hasta que cumplido el año en ese puesto, decidí aventurarme a construir mi propio Estudio Jurídico"
+                        },
+
+                        {
+                "empresa": "Colegio de Abogados de la 7ma Circunscripción Judicial - Cruz del Eje, Córdoba",
+                "logoempresa" : "/assets/logo_colegio_ab.png",
+                "sitioweb" : "https://www.facebook.com/colegiodeabogadoscruzdeleje/",
+                "telefono" : "543549443091",
+                "cargo" :  "Presidente de la Delegación de la Ciudad de Cosquín",
+                "periodo" : "Febrero de 2020 a Febrero de 2022",
+                "descripcion" : "En este cargo electivo, lleve adelante la dirección total de la Delegación Administrativa del Colegio de Abogados de la Ciudad de Cosquín, teniendo a mi cargo no solo los empleados administrativos, sino también un amplio equipo de colegas compuesto por secretarios y vocales"
+                        },
+
+                        {
+                "empresa": "Colegio de Abogados de la 7ma Circunscripción Judicial - Cruz del Eje, Córdoba",
+                "logoempresa" : "/assets/logo_colegio_ab.png",
+                "sitioweb" : "https://www.facebook.com/colegiodeabogadoscruzdeleje/",
+                "telefono" : "543549443091",
+                "cargo" :  "Tesorero del Colegio de Abogados",
+                "periodo" : "Febrero de 2022 a la actualidad",
+                "descripcion" : "En este cargo electivo, llevo adelante la dirección presupuestaria, económica y financiera de todo el Colegio de Abogados, incluyendo la Delegación de la Ciudad de Cosquín, teniendo a mi cargo no solo la actividad económica, presupuestaria y las finanzas, sino también el equipo de Administración y Contadores."
+                        }
+                ],
+                
+        "proyectos" :  [
+                        {
+                        "nombre" : "Portfolio Web",
+                        "logo" :"assets/icono.ico",
+                        "url" : "index.html",
+                        "fecha" : "Agosto de 2022",
+                        "descripcion" : "Desarrollé una aplicación web full stack, que muestra datos personales, estudios, experiencia laboral y conocimiento de las tecnologías. De arquitectura distribuida, contiene un diseño de interface (front end) que muestra la información de manera dinámica desde una base de datos, contando con las APIs necesarias para proveer a través de internet la información (back end)."
+                        }
+                ],
+        
+        "habilidadesHard" :                  
+                         [ {
+                        "tipo" : "HTML",
+                        "puntaje" :  "60"
+                                },
+                                {
+                        "tipo" : "CSS",
+                        "puntaje" :  "40"
+                                },
+                                {
+                        "tipo" : "JAVA",
+                        "puntaje" : "50"
+                                },
+                                {
+                        "tipo" : "DATA BASE",
+                        "puntaje" :  "60"
+                                },
+                                {
+                        "tipo" : "ANGULAR",
+                        "puntaje" :  "50"
+                                },
+                                {
+                        "tipo" : "GITHUB",
+                        "puntaje" :  "50"
+                                }
+                        ],
+        
+        "habilidadesSoft" :    [ 
+                               {
+                       "tipo" : "Oratoria",
+                       "puntaje" :  "85"
+                               },
+
+                               {
+                       "tipo" : "Manejo de Grupos",
+                       "puntaje" :  "80"
+                               },
+                               
+                               {
+                       "tipo" : "Planificacion-Plazos",
+                       "puntaje" : "90"
+                               },
+                               {
+                       "tipo" : "Manejo de Emergencias-Crisis",
+                       "puntaje" :  "90"
+                               },
+               
+                               {
+                       "tipo" : "Liderazgo",
+                       "puntaje" :  "80"
+                               },
+                               {
+                       "tipo" : "Autodidacta",
+                       "puntaje" :  "90"
+                               }
+                        ],
+
+        "usuarios" :    [ 
+                               {
+                       "nombre" : "Arce J. Leandro",
+                       "password" :  "1234",
+                       "email" : "jorgeleandro.arce@gmail.com"
+                               }
+                        ]
+}
+
+
+
+        
+    
+    

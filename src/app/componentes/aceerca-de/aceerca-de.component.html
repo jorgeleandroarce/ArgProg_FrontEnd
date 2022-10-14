@@ -1,0 +1,14 @@
+<!---Banner y Esto es el ACERCA DE--->
+<div class="conteiner_Acerca_de"> 
+    <img class= "img_Portada" [src]="persona.imgportada" alt="Banner">
+    <img class="img_miFoto" [src]="persona.imgfoto" [title]="persona.nombre" [alt]="persona.nombre">
+    
+    <div class="conteiner_new">
+        <h2>Acerca de</h2>
+        <button type="button" class="btn btn-outline-info" routerLink="/editMe">Editar</button>
+    </div>
+
+    <h3>{{persona.nombre}}</h3>
+    <h4>{{persona.profesion}}</h4>
+        <p>{{persona.descripcion}}</p>
+</div>

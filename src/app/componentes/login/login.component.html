@@ -1,0 +1,34 @@
+<div class="login_form"><!---Formulario de Logueo--->
+    <h2>INICIAR SESION</h2>
+    <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+        <label class="item_login_form" for="usuario">Usuario</label> 
+        <br>
+        <input [ngClass]="{'is-invalid': Email?.errors && Email?.touched, 'is-valid': !Email?.errors && Email?.touched}" class="form-control" type="email" formControlName="email" name="email" placeholder="ingrese su E-mail">
+        <div *ngIf="Email?.errors && Email?.touched">
+            <p *ngIf="Email?.hasError('required')" class="text-danger">
+                Debe ingresar un e-mail !
+            </p>
+            <p *ngIf="Email?.hasError('email')" class="text-danger">
+                El formato debe ser ej: e-mail@valido.com !
+            </p>
+        </div> 
+        <br>
+        <label class="item_login_form" for="password">Password</label>
+        <br>
+        <input class="form-control" type="password" formControlName="password" name="password" placeholder="ingrese su Contraseña" [ngClass]="{'is-invalid': Password?.errors && Password?.touched, 'is-valid': !Password?.errors && Password?.touched}">
+        <div *ngIf="Password?.errors && Password?.touched">
+            <p *ngIf="Password?.hasError('required')" class="text-danger">
+                Debe ingresar la contraseña !
+            </p>
+            <p *ngIf="Password?.errors?.['minlength']" class="text-danger">
+                La contraseña debe tener de 8 o más caracteres !
+            </p>
+        </div> 
+        <br>
+        <div class="botones_login">
+        <button class="btn btn-outline-primary" type="submit">Login</button> 
+        <button type="button" class="btn btn-outline-secondary" routerLink="">Volver</button>
+        </div>
+    </form>
+  
+</div>

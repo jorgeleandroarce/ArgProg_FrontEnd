@@ -1,0 +1,243 @@
+/*cada em tiene 16px aprox*/
+ 
+* {
+    box-sizing: border-box;
+    margin: 10;
+    padding: 10;
+ }
+ 
+ .conteiner_Encabezado {
+     height: 9vh;
+     border-radius: 3em;
+     border: 0.3em groove rgb(67, 67, 148);
+     margin-bottom: 5px;
+     padding-right: 25px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+ }
+ 
+ .icono {
+     border-radius: 1.8em;
+     height: 45px;
+     flex-grow: 0.28;
+     flex-shrink: 4;
+     
+ }
+ 
+ .conteiner_contacto {
+     height: 9vh;
+     border-radius: 3em;
+     border: 0.3em groove rgb(67, 67, 148);
+     margin-bottom: 5px;
+     margin-top: 5px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+ }
+ 
+ .redes_Sociales {
+     height: 35px;
+     margin: 5px;
+     display: flex;
+     flex-direction: row;
+     align-items:center;
+     justify-content: flex-start;
+     align-content: center;
+}
+ 
+.conteiner_Acerca_de {
+     border-radius: 3em;
+     border: 0.3em groove rgb(67, 67, 148);
+     display: flex;
+     flex-direction: column;
+     justify-content:space-around;
+     align-items: auto;
+ }
+ 
+ .img_Portada {
+    width: 100vw;
+    height: 57vh;
+    max-width: 100%;
+    margin: auto;
+    border-radius: 3em;
+ }
+ 
+ .img_miFoto {
+     position: absolute;
+     border-radius: 3em;
+     width: 150px;
+     margin-top: 38px;
+ }
+ 
+ .conteiner_Exp-Ed-HyS-Proy {
+     margin-top: 10px;
+     padding-top: 5px;
+     border-radius: 3em;
+     border: 0.3em groove rgb(67, 67, 148);
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+ }
+ 
+ .conteiner_Titulos {
+     border-bottom : 0.15em solid rgb(67, 67, 95);
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items:flex-end;
+     padding-bottom: 0;
+     padding-right: 20px;
+     margin-right: 40px;
+     
+ }
+
+ .conteiner_link_proyecto {
+     display: flex;
+     flex-direction: row;
+     justify-content: flex-start;
+     align-items:center;
+ }
+
+ .conteiner_new {
+     display: flex;
+     flex-direction: row;
+     justify-content:center;
+     align-items:flex-end;
+}
+ 
+ .icono_SJI {
+     height: 65px;
+     width: 65px;
+     border: 1.5px groove black;
+ }
+ 
+ .icono_Emp1 {
+     height: 65px;
+     width: 65px;
+ }
+ 
+ .icono_CdelE {
+     height: 75px;
+     width: 75px;
+ }
+ 
+ .iconos_Educacion{
+     height: 50px;
+     width: 100%;
+ }
+ 
+ .icono_Porfolio {
+     height: 45px;
+     width: 45px;
+}
+ 
+ .conteiner_barras {
+     display: flex;
+     flex-direction: row;
+     justify-content:space-between;
+     align-items:center;
+     margin: 10px 100px;
+ }
+
+ .conteiner_edicion {
+    width: 270px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+    align-items:center;
+    justify-content:flex-end;
+ }
+
+ .botones {
+    width: 110px;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content:space-around;
+ }
+ 
+ progress {
+     width: 220px;
+     height: 35px;
+ }
+ 
+ * p {
+     font-family : 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     font-size: 1.1em;
+     padding-left: 15px; 
+     padding-bottom: 0;
+     padding-top: 0;
+     margin: 8px;
+ }
+ 
+ * h2 {
+     font-family: 'Courier New', Courier, monospace;
+     font-weight: 600;
+     font-size: 2.3em;
+     margin-top: 20px;
+     margin-bottom: 0;
+     text-align: center;
+ }
+ 
+ * h3 {
+     font-size: 24px;
+     padding: 0;
+     margin: 8px;
+ }
+ 
+ h4 {
+     font-size: 19px;
+     padding: 0;
+     margin: 8px;
+ }
+ 
+ h5 {
+     font-size: 16px;
+     padding: 0;
+     margin: 6px;
+ }
+ 
+ 
+ .login_form {
+     background-color: rgba(240, 241, 243, 0.774);
+     margin:auto;
+     margin-top: 30px;
+     height: 500px;
+     width: 500px;
+     border-radius: 3em;
+     border: 0.4em groove rgb(67, 67, 148);
+     margin-bottom: 5px;
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+ }
+ 
+ .item_login_form {
+     width: 300px;
+     margin: 5px;
+     padding: 3px;
+     font-size: 17px;
+     font-family:Verdana, Geneva, Tahoma, sans-serif;
+ }
+ 
+  .botones_login {
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+     margin-top: 7px;
+ }
+
+  .mensaje-danger{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+}
+
+

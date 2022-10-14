@@ -1,0 +1,30 @@
+<div class="conteiner_Exp-Ed-HyS-Proy"><!---Esto es el PROYECTOS--->
+    <div class="conteiner_new">
+        <h2>Proyectos</h2> 
+        <button type="button" class="btn btn-outline-success" routerLink="/newProy">New!</button>
+    </div>
+    <ol>
+        <div>
+            <li *ngFor="let proyectos of proyectosList">
+                <div class="conteiner_Titulos">
+                    <h3>{{proyectos.nombre}}</h3>
+                    <div class="conteiner_edicion">
+                          <div class="botones">
+                          <button type="button" class="btn btn-outline-info" routerLink="/editProy">Editar</button>
+                          <button type="button" class="btn btn-outline-danger" (click) = "borrarProy(proyectos.id)"><strong>X</strong></button>
+                        </div>
+                    </div>
+                 </div>
+                <h5>Fecha de realización:</h5> 
+                <p>{{proyectos.fecha}}</p>
+                 <h5>Descripción:</h5>
+                <p>{{proyectos.descripcion}}</p>
+                <h5>Enlace:</h5>
+                <div class="conteiner_link_proyecto">
+                    <a [href]="proyectos.url" target="_blank"><img class="icono_Porfolio" [src]="proyectos.logo"></a><p>Haga click en el logo o <a [href]="proyectos.url" target="_blank">aquí</a> para visitar el proyecto.</p>
+                </div>
+            </li>
+        </div>
+    </ol>
+</div>
+

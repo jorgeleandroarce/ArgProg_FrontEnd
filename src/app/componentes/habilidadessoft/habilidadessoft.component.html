@@ -1,0 +1,24 @@
+<div class="conteiner_Exp-Ed-HyS-Proy"><!---Esto es el HARD & SOFT SKILLS--->
+    
+    <div class="conteiner_new">
+        <h2>SOFT Skills</h2>
+        <button type="button" class="btn btn-outline-success" routerLink="/newHabS">New!</button>
+    </div>
+    
+    <h3 class="conteiner_Titulos">Soft Skills</h3>
+    
+    <ul>
+        <div>  
+            <li *ngFor="let habilidadesSoft of habilidadesSoftList">
+                <div class="conteiner_barras"> 
+                    <div style=" display: flex; flex-direction: row">
+                        <h4>{{habilidadesSoft.tipo}}</h4>
+                        <progress min="0" max="100" [value]="habilidadesSoft.puntaje"></progress>
+                    </div>
+                    <button type="button" class="btn btn-outline-danger" (click) = "borrarHabSf(habilidadesSoft.id)"><strong>X</strong></button>
+                </div>
+            </li>
+        </div>
+    </ul>
+    
+</div>

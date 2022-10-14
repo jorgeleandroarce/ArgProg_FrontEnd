@@ -1,0 +1,37 @@
+<div class="form_new"> <!---Formulario para Agregar Nuevos Proyectos--->
+    
+    <h2 style="margin-bottom: 25px">Agregar Nuevo Proyecto</h2>
+    <form (ngSubmit)="newProy()" novalidate #f="ngForm">
+        
+        <label class="item_form-new" for="nombre">Nombre del Proyecto</label>
+        <br>
+        <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" placeholder="ingrese nombre del Proyecto" required>
+        <br>
+       
+        <label class="item_form-new" for="logo">Logo del Proyecto</label>
+        <br>
+        <input type="text" class="form-control" id="logo" name="logo" [(ngModel)]="logo" placeholder="ingrese imagen tipo (jpg. png.)">
+        <br>
+
+        <label class="item_form-new" for="url">URL del Proyecto</label>
+        <br>
+        <input type="text" class="form-control" id="url" name="url" [(ngModel)]="url" placeholder="ingrese URL del Proyecto">
+        <br>
+
+        <label class="item_form-new" for="fecha">Fecha</label>
+        <br>
+        <input type="text" class="form-control" id="fecha" name="fecha" [(ngModel)]="fecha" placeholder="ingrese la fecha en que lo realizó" required>
+        <br>
+
+        <label class="item_form-new" for="descripcion">Descripcion</label>
+        <br>
+        <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="descripcion" placeholder="describa el Proyecto" required>
+        <br>
+
+     <div class="botones_login">
+          <button class="btn btn-outline-primary">Agregar Nuevo</button>
+          <button type="button" class="btn btn-outline-secondary" routerLink="">Volver</button>
+     </div>
+    </form>
+
+</div>

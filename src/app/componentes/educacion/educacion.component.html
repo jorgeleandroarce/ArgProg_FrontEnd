@@ -1,0 +1,23 @@
+<div class="conteiner_Exp-Ed-HyS-Proy"><!---Esto es el EDUCACION--->
+    <div class="conteiner_new">
+        <h2>Educacion</h2>
+        <button type="button" class="btn btn-outline-success" routerLink="/newEduc">New!</button>
+    </div>
+    <ol>
+        <div><li *ngFor="let educacion of educacionList">
+            <div class="conteiner_Titulos">
+                <h3>{{educacion.escuela}}</h3>
+                <div class="conteiner_edicion">
+                    <a [href]="educacion.sitioweb" target="_blank"><img class="iconos_Educacion" [src]="educacion.logotipo" title="Click aqui para mas info" [alt]="educacion.escuela"></a> 
+                    <div class="botones">
+                        <button type="button" class="btn btn-outline-info" routerLink="/editEduc/{{educacion.id}}">Editar</button>
+                        <button type= "button" class="btn btn-outline-danger" (click) = "borrarE(educacion.id)" ><strong>X</strong></button>
+                    </div>
+                </div>
+            </div>
+            <h4>{{educacion.titulo}}</h4>
+            <p>{{educacion.periodo}}</p>
+            </li>
+        </div>
+    </ol>
+</div>

@@ -1,0 +1,24 @@
+.form_new{
+    background-color: rgba(240, 241, 243, 0.774);
+     margin:auto;
+     margin-top: 30px;
+     height: 400px;
+     width: 600px;
+     border-radius: 3em;
+     border: 0.4em groove rgb(67, 67, 148);
+     margin-bottom: 5px;
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: column;
+     justify-content: center;
+     align-items:center;
+     padding-left: 25px;
+}
+
+.item_form-new {
+    width: 400px;
+    margin: 2px;
+    padding: 1px;
+    font-size: 17px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}

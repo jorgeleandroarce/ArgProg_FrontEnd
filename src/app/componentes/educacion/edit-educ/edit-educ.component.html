@@ -1,0 +1,38 @@
+<div class="form_new"><!---Formulario para Agregar Nueva Educación--->
+    
+    <h2 style="margin-bottom: 25px">Editar Experiencia</h2>
+   
+    <form (ngSubmit)="editEduc()" novalidate #f="ngForm">
+        
+        <label class="item_form-new" for="escuela">Institucion Educativa</label>
+        <br>
+        <input type="text" class="form-control" id="escuela" name="escuela" [(ngModel)]="educacion.escuela" [value]="educacion.escuela" required>
+        <br>
+       
+        <label class="item_form-new" for="logotipo">Logo de la Institucion</label>
+        <br>
+        <input type="text" class="form-control" id="logotipo" name="logotipo"  [(ngModel)]="educacion.logotipo">
+        <br>
+
+        <label class="item_form-new" for="sitioweb">Sitio Web</label>
+        <br>
+        <input type="text" class="form-control" id="sitioweb" name="sitioweb" [(ngModel)]="educacion.sitioweb">
+        <br>
+
+        <label class="item_form-new" for="titulo">Titulo Obtenido</label>
+        <br>
+        <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="educacion.titulo" required>
+        <br>
+
+        <label class="item_form-new" for="periodo">Periodo</label>
+        <br>
+        <input type="text" class="form-control" id="periodo" name="periodo" [(ngModel)]="educacion.periodo" required>
+        <br>
+
+     <div class="botones_login">
+          <button class="btn btn-outline-primary">Actualizar</button>
+          <button type="button" class="btn btn-outline-secondary" routerLink="">Volver</button>
+     </div>
+    </form>
+
+</div>

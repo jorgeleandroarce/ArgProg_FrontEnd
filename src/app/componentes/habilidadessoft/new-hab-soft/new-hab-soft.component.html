@@ -1,0 +1,23 @@
+<div class="form_new">
+    <!---Formulario para Agregar Nueva Habilidad Soft--->
+    <h2 style="margin-bottom: 25px">Agregar Nueva Habilidad Blanda</h2>
+    <form (ngSubmit)="newHabS()" novalidate #f="ngForm">
+        
+        <label class="item_form-new" for="tipo">Tipo</label>
+        <br>
+        <input type="text" class="form-control" id="tipo" name="tipo" [(ngModel)]="tipo" placeholder="Ej: Oratoria; Liderazgo, Trabajo en Equipo, etc." required>
+        <br>
+        
+        <label class="item_form-new" for="puntaje">Puntaje</label>
+        <br>
+        <input type="number" min="0" max="100" step="5" class="form-control" id="puntaje" name="puntaje" [(ngModel)]="puntaje" placeholder="ingerese un valor de 0 a 100!" required>
+        <br>
+
+     <div class="botones_login">
+          <button class="btn btn-outline-primary">Agregar Nueva</button>
+          <button type="button" class="btn btn-outline-secondary" routerLink="">Volver</button>
+     </div>
+    </form>
+
+</div>
+

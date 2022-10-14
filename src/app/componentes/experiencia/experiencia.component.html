@@ -1,0 +1,26 @@
+<div class="conteiner_Exp-Ed-HyS-Proy"><!---Esto es el EXPERIENCIA--->
+    <div class="conteiner_new">
+        <h2>Experiencia</h2>
+        <button type="button" class="btn btn-outline-success" routerLink="/newExp">New!</button>
+    </div>
+    <ol>
+        <div> 
+            <li *ngFor="let experiencia of experienciaList">
+                <div class="conteiner_Titulos">
+                    <h3>{{experiencia.empresa}}</h3>
+                    <div class="conteiner_edicion">
+                        <a [href]="experiencia.sitioweb" target="_blank"><img class="icono_Emp1" [src]="experiencia.logoempresa" alt="Logotipo"></a>
+                        <div class="botones">
+                            <button type="button" class="btn btn-outline-info" routerLink="/editExp">Editar</button>
+                            <button type="button" class="btn btn-outline-danger" (click) = "borrarExp(experiencia.id)"><strong>X</strong></button>
+                        </div>
+                    </div>
+                </div>
+                <h4>{{experiencia.cargo}}</h4>
+                <p>{{experiencia.periodo}}</p>
+                <p>{{experiencia.descripcion}}</p>
+                <p>Para solicitar referencias en esta empresa, puede comunicarse al numero: {{experiencia.telefono}}</p>
+            </li>
+        </div>
+    </ol>
+</div>

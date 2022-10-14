@@ -1,0 +1,47 @@
+<div class="form_new">
+    <!---Formulario para Agregar Nueva Experiencia--->
+    <h2 style="margin-bottom: 25px">Agregar Nueva Experiencia Laboral</h2>
+    <form (ngSubmit)="newExp()" novalidate #f="ngForm">
+        
+        <label class="item_form-new" for="empresa">Empresa</label>
+        <br>
+        <input type="text" class="form-control" id="empresa" name="empresa" [(ngModel)]="empresa" placeholder="ingrese nombre de la empresa donde trabajo" required>
+        <br>
+       
+        <label class="item_form-new" for="logoempresa">Logo de la Empresa</label>
+        <br>
+        <input type="text" class="form-control" id="logoempresa" name="logoempresa"  [(ngModel)]="logoempresa" placeholder="ingrese imagen tipo (jpg. png.)">
+        <br>
+
+        <label class="item_form-new" for="sitioweb">Sitio Web</label>
+        <br>
+        <input type="text" class="form-control" id="sitioweb" name="sitioweb" [(ngModel)]="sitioweb" placeholder="ingrese URL de la pagina Web de la Empresa">
+        <br>
+
+        <label class="item_form-new" for="telefono">Telefono</label>
+        <br>
+        <input type="text" class="form-control" id="telefono" name="telefono" [(ngModel)]="telefono" placeholder="ingrese el numero telefonico de la Empresa">
+        <br>
+
+        <label class="item_form-new" for="cargo">Cargo</label>
+        <br>
+        <input type="text" class="form-control" id="cargo" name="cargo" [(ngModel)]="cargo" placeholder="ingrese el cargo que ocupaba" required>
+        <br>
+
+        <label class="item_form-new" for="periodo">Periodo</label>
+        <br>
+        <input type="text" class="form-control" id="periodo" name="periodo" [(ngModel)]="periodo" placeholder="ingrese el periodo en el que trabajó" required>
+        <br>
+
+        <label class="item_form-new" for="descripcion">Descripcion</label>
+        <br>
+        <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="descripcion" placeholder="describa la actividad que realizada" required>
+        <br>
+
+     <div class="botones_login">
+          <button class="btn btn-outline-primary">Agregar Nueva</button>
+          <button type="button" class="btn btn-outline-secondary" routerLink="">Volver</button>
+     </div>
+    </form>
+
+</div>
