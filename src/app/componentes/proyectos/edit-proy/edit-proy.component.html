@@ -1,1 +1,38 @@
-<p>edit-proy works!</p>
+<div class="form_new"> <!---Formulario para Editar Proyectos--->
+    
+    <h2 style="margin-bottom: 25px">Editar Proyecto</h2>
+    <form (ngSubmit)="editProy()" novalidate #f="ngForm">
+        
+        <label class="item_form-new" for="nombre">Nombre del Proyecto</label>
+        <br>
+        <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="proyEdit.nombre" required>
+        <br>
+       
+        <label class="item_form-new" for="logo">Logo del Proyecto</label>
+        <br>
+        <input type="text" class="form-control" id="logo" name="logo" [(ngModel)]="proyEdit.logo">
+        <br>
+
+        <label class="item_form-new" for="url">URL del Proyecto</label>
+        <br>
+        <input type="text" class="form-control" id="url" name="url" [(ngModel)]="proyEdit.url" required>
+        <br>
+
+        <label class="item_form-new" for="fecha">Fecha</label>
+        <br>
+        <input type="text" class="form-control" id="fecha" name="fecha" [(ngModel)]="proyEdit.fecha" required>
+        <br>
+
+        <label class="item_form-new" for="descripcion">Descripcion</label>
+        <br>
+        <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="proyEdit.descripcion" required>
+        <br>
+
+     <div class="botones_login">
+          <button class="btn btn-outline-primary">Actualizar</button>
+          <button type="button" class="btn btn-outline-secondary" routerLink="">Volver</button>
+     </div>
+    </form>
+
+</div>
+

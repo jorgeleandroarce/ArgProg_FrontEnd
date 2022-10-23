@@ -1,31 +1,35 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { map } from 'rxjs';
+import { Usuarios } from '../clases/usuarios';
+import { Observable } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class AutenticacionService {
+
+ URL =  'http://localhost:8080/usuarios';
+
+  logueado: boolean = false;
   
-  url="assets/data/data.json" //aca va la URL de la API de autenticación, que yo no la puedo poner porque aún no se como se construye. Deberia explicarlo la masterclass 9 pero no está! //
-  currentUserSubjet: BehaviorSubject<any>;
-  
-  constructor(private http:HttpClient) { 
-    console.log("...pero como corre este servicio!");
-    this.currentUserSubjet= new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('usuarioActual') || '{}'))
+ constructor(private http:HttpClient) { }
+
+ public loginOk(obj:any):boolean{
+  this.logueado = obj.email == 'jorgeleandro.arce@gmail.com' && obj.password =='12345678';
+  return this.logueado;
   }
 
-  IniciarSesion(credenciales:any):Observable<any> {
-    return this.http.post(this.url, credenciales).pipe(map(data=>{
-      sessionStorage.setItem('usuarioActual', JSON.stringify(data));
-      this.currentUserSubjet.next(data);
-      return data;
-    }))
+  public autorizado(){
+    return this.logueado;
   }
 
-  get UsuarioAutenticado() {
-    return this.currentUserSubjet.value
+  public cerrarSesion():void{
+    window.sessionStorage.clear();
   }
 
+  public loginDB(usuarios:Usuarios):Observable<any> {
+    return this.http.post<any>(this.URL+'/un/100', usuarios);
+  }
 }

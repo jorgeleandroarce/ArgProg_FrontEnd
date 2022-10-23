@@ -1,32 +1,32 @@
 <div class="form_new"><!---Formulario para Agregar Nueva Educación--->
     
-    <h2 style="margin-bottom: 25px">Editar Experiencia</h2>
+    <h2 style="margin-bottom: 25px">Editar Educacion</h2>
    
     <form (ngSubmit)="editEduc()" novalidate #f="ngForm">
         
         <label class="item_form-new" for="escuela">Institucion Educativa</label>
         <br>
-        <input type="text" class="form-control" id="escuela" name="escuela" [(ngModel)]="educacion.escuela" [value]="educacion.escuela" required>
+        <input type="text" class="form-control" id="escuela" name="escuela" [(ngModel)]="educEdit.escuela" required>
         <br>
        
         <label class="item_form-new" for="logotipo">Logo de la Institucion</label>
         <br>
-        <input type="text" class="form-control" id="logotipo" name="logotipo"  [(ngModel)]="educacion.logotipo">
+        <input type="text" class="form-control" id="logotipo" name="logotipo"  [(ngModel)]="educEdit.logotipo">
         <br>
 
         <label class="item_form-new" for="sitioweb">Sitio Web</label>
         <br>
-        <input type="text" class="form-control" id="sitioweb" name="sitioweb" [(ngModel)]="educacion.sitioweb">
+        <input type="text" class="form-control" id="sitioweb" name="sitioweb" [(ngModel)]="educEdit.sitioweb">
         <br>
 
         <label class="item_form-new" for="titulo">Titulo Obtenido</label>
         <br>
-        <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="educacion.titulo" required>
+        <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="educEdit.titulo" required>
         <br>
 
         <label class="item_form-new" for="periodo">Periodo</label>
         <br>
-        <input type="text" class="form-control" id="periodo" name="periodo" [(ngModel)]="educacion.periodo" required>
+        <input type="text" class="form-control" id="periodo" name="periodo" [(ngModel)]="educEdit.periodo" required>
         <br>
 
      <div class="botones_login">

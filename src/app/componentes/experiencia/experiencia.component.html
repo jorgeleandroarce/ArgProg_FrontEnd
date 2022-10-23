@@ -11,7 +11,7 @@
                     <div class="conteiner_edicion">
                         <a [href]="experiencia.sitioweb" target="_blank"><img class="icono_Emp1" [src]="experiencia.logoempresa" alt="Logotipo"></a>
                         <div class="botones">
-                            <button type="button" class="btn btn-outline-info" routerLink="/editExp">Editar</button>
+                            <button type="button" class="btn btn-outline-info" routerLink="/editExp/{{experiencia.id}}">Editar</button>
                             <button type="button" class="btn btn-outline-danger" (click) = "borrarExp(experiencia.id)"><strong>X</strong></button>
                         </div>
                     </div>

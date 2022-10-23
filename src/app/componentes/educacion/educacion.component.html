@@ -11,12 +11,12 @@
                     <a [href]="educacion.sitioweb" target="_blank"><img class="iconos_Educacion" [src]="educacion.logotipo" title="Click aqui para mas info" [alt]="educacion.escuela"></a> 
                     <div class="botones">
                         <button type="button" class="btn btn-outline-info" routerLink="/editEduc/{{educacion.id}}">Editar</button>
-                        <button type= "button" class="btn btn-outline-danger" (click) = "borrarE(educacion.id)" ><strong>X</strong></button>
+                        <button type= "button" class="btn btn-outline-danger" (click) = "borrarE(educacion.id)"><strong>X</strong></button>
                     </div>
                 </div>
             </div>
-            <h4>{{educacion.titulo}}</h4>
-            <p>{{educacion.periodo}}</p>
+            <h4>Titulo: {{educacion.titulo}}</h4>
+            <p>Periodo: {{educacion.periodo}}</p>
             </li>
         </div>
     </ol>

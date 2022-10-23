@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Persona } from '../clases/persona';
 
 @Injectable({
   providedIn: 'root'
@@ -9,12 +10,18 @@ import { Observable } from 'rxjs';
 export class PorfolioService {
 
   url='http://localhost:8080/persona';
-  //url= 'assets/data';
-
+  
   constructor(private http:HttpClient) { }
 
-  public obtenerDatos():Observable<any> {
+  public obtenerMisDatos():Observable<any> {
     return this.http.get<any>(this.url+'/ver/1');
-    //return this.http.get<any>(this.url+'/data.json');
+  }
+
+  public obtenerUnaPer(id : number):Observable<any> {
+    return this.http.get<any>(this.url+`/ver/${id}`);
+  }
+
+  public editarPersona(id:number, persona:Persona):Observable<any> {
+    return this.http.put<any>(this.url+`/editar/${id}`, persona);
   }
 }

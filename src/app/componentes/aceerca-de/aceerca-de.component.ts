@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
 import { PorfolioService } from 'src/app/servicios/porfolio.service';
 
 @Component({
@@ -8,15 +9,23 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
 })
 export class AceercaDeComponent implements OnInit {
 
-  persona:any;  
-
-  constructor(private servicioPorfolio:PorfolioService) { }
+  persona:any;
+  
+  logueado = false;
+  
+ constructor(private servicioPorfolio:PorfolioService, private authService:AutenticacionService) { }
 
   ngOnInit(): void {
-    this.servicioPorfolio.obtenerDatos().subscribe(data =>{
-      console.log(data);
+   this.mostrarPersona();
+   if(this.authService.autorizado()){
+    this.logueado = true; }
+    else { this.logueado = false; }
+  }
+
+  mostrarPersona(): void {
+    this.servicioPorfolio.obtenerMisDatos().subscribe(data =>{
       this.persona=data;
-    });
+      });
   }
 
 }

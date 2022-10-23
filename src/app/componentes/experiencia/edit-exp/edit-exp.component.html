@@ -1,1 +1,48 @@
-<p>edit-exp works!</p>
+ <!---Formulario para Editar Experiencia--->
+<div class="form_new">
+   
+    <h2 style="margin-bottom: 25px">Editar Experiencia Laboral</h2>
+    <form (ngSubmit)="editExp()" novalidate #f="ngForm">
+        
+        <label class="item_form-new" for="empresa">Empresa</label>
+        <br>
+        <input type="text" class="form-control" id="empresa" name="empresa" [(ngModel)]="expEdit.empresa" required>
+        <br>
+       
+        <label class="item_form-new" for="logoempresa">Logo de la Empresa</label>
+        <br>
+        <input type="text" class="form-control" id="logoempresa" name="logoempresa"  [(ngModel)]="expEdit.logoempresa">
+        <br>
+
+        <label class="item_form-new" for="sitioweb">Sitio Web</label>
+        <br>
+        <input type="text" class="form-control" id="sitioweb" name="sitioweb" [(ngModel)]="expEdit.sitioweb">
+        <br>
+
+        <label class="item_form-new" for="telefono">Telefono</label>
+        <br>
+        <input type="text" class="form-control" id="telefono" name="telefono" [(ngModel)]="expEdit.telefono">
+        <br>
+
+        <label class="item_form-new" for="cargo">Cargo</label>
+        <br>
+        <input type="text" class="form-control" id="cargo" name="cargo" [(ngModel)]="expEdit.cargo" required>
+        <br>
+
+        <label class="item_form-new" for="periodo">Periodo</label>
+        <br>
+        <input type="text" class="form-control" id="periodo" name="periodo" [(ngModel)]="expEdit.periodo" required>
+        <br>
+
+        <label class="item_form-new" for="descripcion">Descripcion</label>
+        <br>
+        <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="expEdit.descripcion" required>
+        <br>
+
+     <div class="botones_login">
+          <button class="btn btn-outline-primary">Actualizar</button>
+          <button type="button" class="btn btn-outline-secondary" routerLink="">Volver</button>
+     </div>
+    </form>
+
+</div>

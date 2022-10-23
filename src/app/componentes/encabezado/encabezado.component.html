@@ -1,11 +1,11 @@
 <header class="conteiner_Encabezado"> <!---Esto es el Encabezado--->
         
-    <!---Iconos--->
+    <!---Icono--->
     <img class="icono" src="\assets\logoargprog.png" alt="Logo de Argentina Programa">
         
     <!---Ir al FORMULARIO DE LOGUEO--->
-    <button type="button" class="btn btn-primary btn-sm" routerLink="/login">LOGIN</button>
+    <button type="button" class="btn btn-outline-primary" *ngIf="!logueado" routerLink="/login"><strong>LOGIN</strong></button>
+    <button type="button" class="btn btn-outline-secondary" (click)="cerrar()" *ngIf="logueado"><strong>CERRAR</strong></button>
       
-
 </header>
 

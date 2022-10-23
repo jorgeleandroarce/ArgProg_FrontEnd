@@ -24,7 +24,7 @@ export class NewProyComponent implements OnInit {
   newProy(): void {
     const proy = new Proyectos (this.nombre, this.logo, this.url, this.fecha, this.descripcion);
     this.servicioProyectos.nuevoProyecto(proy).subscribe(data =>{
-      alert("añadiste una nueva capacitacion!");
+      alert("añadiste un nuevo Proyecto!");
       this.ruta.navigate(['']);
     }, err =>{
       alert("algo falló");

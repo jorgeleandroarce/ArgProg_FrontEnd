@@ -10,12 +10,11 @@ export class ContactoComponent implements OnInit {
 
   contacto:any;  
 
-  constructor(private datosPorfolio:PorfolioService) { }
+  constructor(private servicioPorfolio:PorfolioService) { }
 
   ngOnInit(): void {
-    this.datosPorfolio.obtenerDatos().subscribe(data =>{
-      console.log(data);
-      this.contacto=data;
+    this.servicioPorfolio.obtenerMisDatos().subscribe(data =>{
+    this.contacto=data;
     });
   }
 

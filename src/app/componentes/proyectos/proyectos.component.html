@@ -10,7 +10,7 @@
                     <h3>{{proyectos.nombre}}</h3>
                     <div class="conteiner_edicion">
                           <div class="botones">
-                          <button type="button" class="btn btn-outline-info" routerLink="/editProy">Editar</button>
+                          <button type="button" class="btn btn-outline-info" routerLink="/editProy/{{proyectos.id}}">Editar</button>
                           <button type="button" class="btn btn-outline-danger" (click) = "borrarProy(proyectos.id)"><strong>X</strong></button>
                         </div>
                     </div>

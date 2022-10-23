@@ -11,17 +11,16 @@ import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
 
 export class LoginComponent implements OnInit {
   
-  form:FormGroup;
+  formGrup:FormGroup;
 
-  constructor (private formBuilder:FormBuilder, 
-              private autenticacionService:AutenticacionService, 
-              private ruta:Router) {
+  logueado = false;
+
+  constructor (private formBuilder:FormBuilder, private ruta:Router, private authService:AutenticacionService) {
     
-    this.form=this.formBuilder.group(
+    this.formGrup=this.formBuilder.group(
       {
        email: ['', [Validators.required, Validators.email]],
        password: ['', [Validators.required, Validators.minLength(8)]],
-        //aca va algo mas que se llama DeviceInfo que no se para que sirve ni como se obtiene. Está en la master class 8.2 que no entiendo de donde lo saco la profesora, aparentemente se crea primero en una API, pero eso no esta explicado en nigun lado. La masterclass 9 lo muestra, pero no lo enseña.//
       }
     )
   }
@@ -30,19 +29,20 @@ export class LoginComponent implements OnInit {
   }
 
   get Email() {
-    return this.form.get('email')
+    return this.formGrup.get('email')
   }
 
   get Password() {
-    return this.form.get('password')
+    return this.formGrup.get('password')
   }
 
-  onEnviar(event:Event) {
-    event.preventDefault;
-    this.autenticacionService.IniciarSesion(this.form.value).subscribe(data=>{
-      console.log("DATA:" + JSON.stringify(data));
-      this.ruta.navigate(['/fullporfolio']);
-    })
+  public login(){
+    if(this.authService.loginOk(this.formGrup.value)){
+      alert("Acceso Autorizado!");
+      this.logueado = true;
+      this.ruta.navigate(['']);
+    }
+    else {alert ("algo falló! Usuario o Contraseña Incorrecta");
+          this.logueado = false}
   }
-
 }

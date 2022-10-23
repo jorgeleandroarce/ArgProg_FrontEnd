@@ -10,11 +10,10 @@ import { EducacionComponent } from './componentes/educacion/educacion.component'
 import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { PorfolioService } from './servicios/porfolio.service';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './componentes/login/login.component';
 import { FullporfolioComponent } from './componentes/fullporfolio/fullporfolio.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { InterceptorService } from './servicios/interceptor.service';
 import { ContactoComponent } from './componentes/contacto/contacto.component';
 import { HabilidadessoftComponent } from './componentes/habilidadessoft/habilidadessoft.component';
 import { NewEducComponent } from './componentes/educacion/new-educ/new-educ.component';
@@ -57,7 +56,7 @@ import { EditExpComponent } from './componentes/experiencia/edit-exp/edit-exp.co
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [PorfolioService, {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi:true}],
+  providers: [PorfolioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

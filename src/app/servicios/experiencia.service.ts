@@ -17,6 +17,10 @@ export class ExperienciaService {
     return this.http.get<any>(this.url+'/ver');
   }
 
+  public obtenerUnaExp(id : number):Observable<any> {
+    return this.http.get<any>(this.url+`/una/${id}`);
+  }
+
   public borrarExperiencia(id : number):Observable<any> {
     return this.http.delete<any>(this.url+`/delete/${id}`);
   }

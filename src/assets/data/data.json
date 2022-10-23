@@ -84,8 +84,8 @@
                         "nombre" : "Portfolio Web",
                         "logo" :"assets/icono.ico",
                         "url" : "index.html",
-                        "fecha" : "Agosto de 2022",
-                        "descripcion" : "Desarrollé una aplicación web full stack, que muestra datos personales, estudios, experiencia laboral y conocimiento de las tecnologías. De arquitectura distribuida, contiene un diseño de interface (front end) que muestra la información de manera dinámica desde una base de datos, contando con las APIs necesarias para proveer a través de internet la información (back end)."
+                        "fecha" : "Octubre de 2022",
+                        "descripcion" : "App web full stack de arquitectura distribuida, muestra la información de manera dinámica desde una base de datos, contando con las APIs necesarias para proveer la información (CRUD)."
                         }
                 ],
         

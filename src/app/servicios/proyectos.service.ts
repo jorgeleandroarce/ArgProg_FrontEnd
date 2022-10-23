@@ -16,6 +16,10 @@ export class ProyectosService {
     return this.http.get<any>(this.url+'/ver');
   }
 
+  public obtenerUnProyecto(id : number):Observable<any> {
+    return this.http.get<any>(this.url+`/una/${id}`);
+  }
+
   public borrarProyectos(id : number):Observable<any> {
     return this.http.delete<any>(this.url+`/delete/${id}`);
   }

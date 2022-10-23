@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
 
 @Component({
   selector: 'app-encabezado',
@@ -8,8 +10,21 @@ import { Component, OnInit } from '@angular/core';
 
 export class EncabezadoComponent implements OnInit {
 
-  constructor() { }
+  logueado = false;
 
-  ngOnInit(): void {  }
+  constructor(private authService:AutenticacionService) { }
 
+  ngOnInit(): void {  
+    if(this.authService.autorizado()){
+      this.logueado = true; }
+      else { this.logueado = false }
+  }
+
+  cerrar(): void{
+    this.authService.cerrarSesion();
+    window.location.reload();
+  }
+
+  
+  
 }

@@ -1,9 +1,13 @@
-<div class="login_form"><!---Formulario de Logueo--->
+<!---Formulario de Logueo--->
+<div class="login_form">
+    
     <h2>INICIAR SESION</h2>
-    <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+    
+    <form [formGroup]="formGrup" (ngSubmit)="login()" novalidate>
+        
         <label class="item_login_form" for="usuario">Usuario</label> 
         <br>
-        <input [ngClass]="{'is-invalid': Email?.errors && Email?.touched, 'is-valid': !Email?.errors && Email?.touched}" class="form-control" type="email" formControlName="email" name="email" placeholder="ingrese su E-mail">
+        <input [ngClass]="{'is-invalid': Email?.errors && Email?.touched, 'is-valid': !Email?.errors && Email?.touched}" class="form-control" type="email" formControlName="email" name="email" id="email" placeholder="ingrese su E-mail">
         <div *ngIf="Email?.errors && Email?.touched">
             <p *ngIf="Email?.hasError('required')" class="text-danger">
                 Debe ingresar un e-mail !
@@ -13,9 +17,10 @@
             </p>
         </div> 
         <br>
+        
         <label class="item_login_form" for="password">Password</label>
         <br>
-        <input class="form-control" type="password" formControlName="password" name="password" placeholder="ingrese su Contraseña" [ngClass]="{'is-invalid': Password?.errors && Password?.touched, 'is-valid': !Password?.errors && Password?.touched}">
+        <input class="form-control" type="password" formControlName="password" name="password" id="password" placeholder="ingrese su Contraseña" [ngClass]="{'is-invalid': Password?.errors && Password?.touched, 'is-valid': !Password?.errors && Password?.touched}">
         <div *ngIf="Password?.errors && Password?.touched">
             <p *ngIf="Password?.hasError('required')" class="text-danger">
                 Debe ingresar la contraseña !
@@ -25,6 +30,7 @@
             </p>
         </div> 
         <br>
+        
         <div class="botones_login">
         <button class="btn btn-outline-primary" type="submit">Login</button> 
         <button type="button" class="btn btn-outline-secondary" routerLink="">Volver</button>

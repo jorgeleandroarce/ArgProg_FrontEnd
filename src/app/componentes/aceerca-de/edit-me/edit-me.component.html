@@ -1,1 +1,53 @@
-<p>edit-me works!</p>
+ <!---Formulario para EditarMe--->
+ <div class="form_new">
+   
+    <h2 style="margin-bottom: 25px">Editar Informacion Personal</h2>
+    <form (ngSubmit)="editMe()" novalidate #f="ngForm">
+        
+        <label class="item_form-new" for="nombre">Nombre</label>
+        <br>
+        <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="persoEdit.nombre" required>
+        <br>
+       
+        <label class="item_form-new" for="profesion">Profesion</label>
+        <br>
+        <input type="text" class="form-control" id="profesion" name="profesion"  [(ngModel)]="persoEdit.profesion">
+        <br>
+
+        <label class="item_form-new" for="descripcion">Descripcion</label>
+        <br>
+        <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="persoEdit.descripcion">
+        <br>
+
+        <label class="item_form-new" for="imgfoto">Mi Fotografia</label>
+        <br>
+        <input type="text" class="form-control" id="imgfoto" name="imgfoto" [(ngModel)]="persoEdit.imgfoto">
+        <br>
+
+        <label class="item_form-new" for="imgportada">Mi Imagen de Portada</label>
+        <br>
+        <input type="text" class="form-control" id="imgportada" name="imgportada" [(ngModel)]="persoEdit.imgportada">
+        <br>
+
+        <label class="item_form-new" for="telefono">Telefono</label>
+        <br>
+        <input type="number" class="form-control" id="telefono" name="telefono" [(ngModel)]="persoEdit.telefono" required>
+        <br>
+
+        <label class="item_form-new" for="e_mail">E-mail</label>
+        <br>
+        <input type="email" class="form-control" id="e_mail" name="e_mail" [(ngModel)]="persoEdit.e_mail" required>
+        <br>
+
+        <label class="item_form-new" for="instagram">Instagram</label>
+        <br>
+        <input type="url" class="form-control" id="instagram" name="instagram" [(ngModel)]="persoEdit.instagram">
+        <br>
+
+     <div class="botones_login">
+          <button class="btn btn-outline-primary">Actualizar</button>
+          <button type="button" class="btn btn-outline-secondary" routerLink="">Volver</button>
+     </div>
+    </form>
+
+</div>
