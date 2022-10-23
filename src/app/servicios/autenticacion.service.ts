@@ -1,7 +1,4 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Usuarios } from '../clases/usuarios';
-import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -10,11 +7,9 @@ import { Observable } from 'rxjs';
 
 export class AutenticacionService {
 
- URL =  'http://localhost:8080/usuarios';
-
-  logueado: boolean = false;
+ logueado: boolean = false;
   
- constructor(private http:HttpClient) { }
+ constructor() { }
 
  public loginOk(obj:any):boolean{
   this.logueado = obj.email == 'jorgeleandro.arce@gmail.com' && obj.password =='12345678';
@@ -29,7 +24,4 @@ export class AutenticacionService {
     window.sessionStorage.clear();
   }
 
-  public loginDB(usuarios:Usuarios):Observable<any> {
-    return this.http.post<any>(this.URL+'/un/100', usuarios);
-  }
 }

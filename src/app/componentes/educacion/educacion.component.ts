@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
 import { EducacionService } from 'src/app/servicios/educacion.service';
 
 
@@ -13,9 +12,7 @@ export class EducacionComponent implements OnInit {
 
   educacionList:any;
 
-  logueado : boolean = false;
-
-  constructor(private servicioEducacion:EducacionService, private authService:AutenticacionService ){}
+  constructor(private servicioEducacion:EducacionService){}
 
   ngOnInit(): void {
     this.mostrarEduc();
