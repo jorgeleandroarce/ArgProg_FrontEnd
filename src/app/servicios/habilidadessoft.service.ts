@@ -10,7 +10,8 @@ import { HabilidadesSoft } from '../clases/habilidades-soft';
 
 export class HabilidadessoftService {
 
-  url='http://localhost:8080/habilidadessoft';
+  //url='http://localhost:8080/habilidadessoft';
+  url='https://porfolioarcejleandro.herokuapp.com/habilidadessoft';
   
   constructor(private http:HttpClient) { }
 

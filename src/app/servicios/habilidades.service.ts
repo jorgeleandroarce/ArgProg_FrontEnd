@@ -9,7 +9,8 @@ import { Habilidades } from '../clases/habilidades';
 
 export class HabilidadesService {
 
-  url='http://localhost:8080/habilidadeshard';
+  //url='http://localhost:8080/habilidadeshard';
+  url='https://porfolioarcejleandro.herokuapp.com/habilidadeshard';
   
   constructor(private http:HttpClient) { }
 

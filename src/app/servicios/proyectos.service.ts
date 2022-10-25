@@ -8,7 +8,8 @@ import { Proyectos } from '../clases/proyectos';
 })
 export class ProyectosService {
 
-  url='http://localhost:8080/proyectos';
+  //url='http://localhost:8080/proyectos';
+  url='https://porfolioarcejleandro.herokuapp.com/proyectos';
 
   constructor(private http:HttpClient) { }
 

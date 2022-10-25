@@ -9,7 +9,8 @@ import { Persona } from '../clases/persona';
 
 export class PorfolioService {
 
-  url='http://localhost:8080/persona';
+  //url='http://localhost:8080/persona';
+  url='https://porfolioarcejleandro.herokuapp.com/persona';
   
   constructor(private http:HttpClient) { }
 

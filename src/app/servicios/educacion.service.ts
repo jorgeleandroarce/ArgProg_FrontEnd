@@ -9,7 +9,8 @@ import { Educacion } from '../clases/educacion';
 
 export class EducacionService {
 
-  url='http://localhost:8080/educacion';
+  //url='http://localhost:8080/educacion';
+  url='https://porfolioarcejleandro.herokuapp.com/educacion';
 
   constructor(private http:HttpClient) { }
 
