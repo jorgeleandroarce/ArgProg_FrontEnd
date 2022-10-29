@@ -4,8 +4,8 @@
     <img class="icono" src="\assets\logoargprog.png" alt="Logo de Argentina Programa">
         
     <!---Ir al FORMULARIO DE LOGUEO--->
-    <button type="button" class="btn btn-outline-primary" *ngIf="!logueado" routerLink="/login"><strong>LOGIN</strong></button>
-    <button type="button" class="btn btn-outline-secondary" (click)="cerrar()" *ngIf="logueado"><strong>CERRAR</strong></button>
+    <button type="button" class="btn btn-outline-primary" routerLink="/login" *ngIf="!logeado()"><strong>LOGIN</strong></button>
+    <button type="button" class="btn btn-outline-secondary" (click)="onLogout()" *ngIf="logeado()"><strong>CERRAR</strong></button>
       
 </header>
 

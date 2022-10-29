@@ -25,6 +25,11 @@ import { EditEducComponent } from './componentes/educacion/edit-educ/edit-educ.c
 import { EditProyComponent } from './componentes/proyectos/edit-proy/edit-proy.component';
 import { EditMeComponent } from './componentes/aceerca-de/edit-me/edit-me.component';
 import { EditExpComponent } from './componentes/experiencia/edit-exp/edit-exp.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { CookieService } from 'ngx-cookie-service';
+import { AutenticacionService } from './servicios/autenticacion.service';
 
 @NgModule({
   declarations: [
@@ -54,9 +59,11 @@ import { EditExpComponent } from './componentes/experiencia/edit-exp/edit-exp.co
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth())
   ],
-  providers: [PorfolioService],
+  providers: [PorfolioService, AutenticacionService, CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

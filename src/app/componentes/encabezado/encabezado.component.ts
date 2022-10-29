@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
 
 @Component({
@@ -10,21 +10,22 @@ import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
 
 export class EncabezadoComponent implements OnInit {
 
-  logueado = false;
+  constructor(private authService: AutenticacionService, private ruta: Router) { }
 
-  constructor(private authService:AutenticacionService) { }
+  ngOnInit(): void {
 
-  ngOnInit(): void {  
-    if(this.authService.autorizado()){
-      this.logueado = true; }
-      else { this.logueado = false }
   }
 
-  cerrar(): void{
-    this.authService.cerrarSesion();
-    window.location.reload();
+  logeado() {
+    return this.authService.getToken();
   }
 
-  
-  
+  onLogout() {
+    this.authService.logOut()
+      .then(() => {
+        this.ruta.navigate(['']);
+        window.location.reload();
+      })
+      .catch(error => console.log(error));
+  }
 }

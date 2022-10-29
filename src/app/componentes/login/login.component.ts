@@ -13,8 +13,6 @@ export class LoginComponent implements OnInit {
   
   formGrup:FormGroup;
 
-  logueado = false;
-
   constructor (private formBuilder:FormBuilder, private ruta:Router, private authService:AutenticacionService) {
     
     this.formGrup=this.formBuilder.group(
@@ -36,13 +34,12 @@ export class LoginComponent implements OnInit {
     return this.formGrup.get('password')
   }
 
-  public login(){
-    if(this.authService.loginOk(this.formGrup.value)){
-      alert("Acceso Autorizado!");
-      this.logueado = true;
+  public onLogin(){
+    this.authService.login(this.formGrup.value) 
+    .then(()=> {
+      alert ("Acceso Autorizado")
       this.ruta.navigate(['']);
-    }
-    else {alert ("algo falló! Usuario o Contraseña Incorrecta");
-          this.logueado = false}
+    }) 
+    .catch(() => alert("Usuario o Password Incorrecto"));
   }
 }

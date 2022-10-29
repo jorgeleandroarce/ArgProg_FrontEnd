@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Auth, signInWithEmailAndPassword, signOut } from '@angular/fire/auth';
+import { CookieService } from 'ngx-cookie-service';
 
 
 @Injectable({
@@ -7,21 +9,30 @@ import { Injectable } from '@angular/core';
 
 export class AutenticacionService {
 
- logueado: boolean = false;
+  constructor(private authFire: Auth, private cookie:CookieService) { }
+
+  token: string;
+
+  public login({ email, password }: any) {
+    return signInWithEmailAndPassword(this.authFire, email, password).then(
+      response => {
+        this.authFire.currentUser?.getIdToken().then(
+          token => {
+            this.token = token;
+            this.cookie.set("token", this.token)
+          })
+      });
+  }
   
- constructor() { }
-
- public loginOk(obj:any):boolean{
-  this.logueado = obj.email == 'jorgeleandro.arce@gmail.com' && obj.password =='12345678';
-  return this.logueado;
+  public getToken(){
+    return this.cookie.get("token");
   }
 
-  public autorizado(){
-    return this.logueado;
-  }
 
-  public cerrarSesion():void{
-    window.sessionStorage.clear();
+  public logOut() {
+    return signOut(this.authFire).then(()=>{
+      this.token="";
+      this.cookie.set("token", this.token)
+    });
   }
-
 }
