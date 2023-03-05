@@ -10,7 +10,7 @@ import { Persona } from '../clases/persona';
 export class PorfolioService {
 
   //url='http://localhost:8080/persona';
-  url='https://porfolioarcejleandro.herokuapp.com/persona';
+  url='https://backend-argprog-zer6.onrender.com/persona';
   
   constructor(private http:HttpClient) { }
 

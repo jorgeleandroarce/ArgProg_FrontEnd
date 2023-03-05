@@ -10,7 +10,7 @@ import { Experiencia } from '../clases/experiencia';
 export class ExperienciaService {
 
   //url='http://localhost:8080/experiencia';
-  url='https://porfolioarcejleandro.herokuapp.com/experiencia';
+  url='https://backend-argprog-zer6.onrender.com/experiencia';
 
   constructor(private http:HttpClient) { }
 

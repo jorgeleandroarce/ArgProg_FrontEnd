@@ -9,7 +9,7 @@ import { Proyectos } from '../clases/proyectos';
 export class ProyectosService {
 
   //url='http://localhost:8080/proyectos';
-  url='https://porfolioarcejleandro.herokuapp.com/proyectos';
+  url='https://backend-argprog-zer6.onrender.com/proyectos';
 
   constructor(private http:HttpClient) { }
 

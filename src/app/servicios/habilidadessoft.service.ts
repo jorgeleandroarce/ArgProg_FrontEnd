@@ -11,7 +11,7 @@ import { HabilidadesSoft } from '../clases/habilidades-soft';
 export class HabilidadessoftService {
 
   //url='http://localhost:8080/habilidadessoft';
-  url='https://porfolioarcejleandro.herokuapp.com/habilidadessoft';
+  url='https://backend-argprog-zer6.onrender.com/habilidadessoft';
   
   constructor(private http:HttpClient) { }
 
